@@ -1,0 +1,386 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.encabezado{
+    font-family: 'Montserrat', sans-serif; 
+    background-color: rgb(196, 48, 48);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 1.5rem;
+}
+.noticias{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.encabezado .titulo{
+    padding: 1rem;
+}
+.encabezado .subtitulo{
+    padding: 1rem;
+}
+.titulo2{
+    text-align: center;
+    padding-top: 10rem;
+    padding-right: 15rem;
+}
+.caja-botones{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.botones1{
+    display: flex;
+}
+
+.botonumero{
+    margin: .5rem;
+    padding: 1.5rem;
+    border-color: red;
+    color: red;
+    border-radius: .5rem;
+    
+    height: 1.5rem;
+    text-align: justify;
+}
+
+.botonsgte{
+    background-color: rgb(196, 48, 48);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border-color: red;
+    color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    
+}
+/* despliegue de eventos */
+
+.despli_info{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 1rem;
+}
+.titulo_evento{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 3rem;
+    color: red;
+}
+.titulo_evento p{
+    font-size: 2.5rem;
+    color: red;
+}
+.evento{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: red;
+    border-radius: 2rem;
+    margin: 7rem;
+    background-color: white;
+}
+.evento:hover{
+    transform: scale(1.1);
+    background-color: rgb(196, 48, 48);
+    color: white;
+    border-color: rgb(0, 158, 0);
+}
+.info_eventos{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+.despliegue_eventos a{
+    background-color: red;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    margin-left: 90rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.despliegue_eventos a:hover{
+    background-color: rgb(0, 158, 0);
+}
+
+/* Implementación cartas*/
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    background-color: white;
+    border: 1px solid gray;
+    
+    color: grey;
+    padding: 0.5rem;
+    text-transform: lowercase;
+}
+
+.btn--block {
+    display: block;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.cards__item {
+    display: flex;
+    padding: 1rem;
+
+    @media(min-width: 40rem) {
+        width: 50%;
+    }
+
+    @media(min-width: 56rem) {
+        width: 33.3333%;
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &:hover {
+        .card__image {
+            filter: contrast(100%);
+        }
+    }
+}
+
+.card__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    filter: saturate(180%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+    ;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%; 
+    }
+
+    @media(min-width: 40rem) {
+        &::before {
+            padding-top: 66.6%; 
+        }
+    }
+}
+
+.card__image--flowers {
+    background-image: url(/images/imagen_publicidad_3.jpg);
+}
+
+.card__image--river {
+    background-image: url(/images/imagen_publicidad_1.jpg);
+}
+
+.card__image--record {
+    background-image: url(/images/imagen_publicidad_4.jpg);
+}
+
+.card__image--fence {
+    background-image: url(/images/imagen_publicidad_2.jpg);
+}
+
+.card__title {
+    color: gray;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card__text {
+    flex: 1 1 auto;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+/* pie de pagina */
+/* pie de pagina */
+.pie {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    margin:2rem;
+}
+
+.pie_de_pagina {
+    margin: 3rem;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    gap: 10rem;
+    color: white;
+}
+
+.escudo {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+
+.enlaces {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 1rem;
+    background-color: rgb(140, 206, 18);
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+
+.enlaces a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.enlaces p {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.contacto {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgb(140, 206, 18);
+    ;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+
+.redes_sociales {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgb(140, 206, 18);
+    ;
+    border-radius: 2rem;
+    opacity: 0.8;
+}
+
+.redes_sociales a {
+    text-decoration: none;
+    color: white;
+}
+
+.Copyright {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+.nomenclatura {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.correo {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.telefono {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Facebook {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Twitter {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nomenclatura {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Instagram {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Whattsapp {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
